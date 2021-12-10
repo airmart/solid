@@ -1,6 +1,6 @@
 {
-  "name": "airmart/calc",
-  "description": "Simple calc",
+  "name": "airmart/solid",
+  "description": "Simple examples solid methods",
   "license": "MIT",
   "type": "library",
   "autoload": {
