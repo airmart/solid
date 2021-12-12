@@ -4,16 +4,22 @@ namespace App;
 
 class Rectangle
 {
-    private $width;
-    private $height;
+    /** @var int */
+    private int $width;
+    /** @var int */
+    private int $height;
 
-    public function __construct($w, $h)
+    public function __construct(int $width, int $height)
     {
-        $this->width = $w;
-        $this->height = $h;
+        $this->width = $width;
+        $this->height = $height;
     }
 
-    public function calcArea() {
+    /**
+     * @return int
+     */
+    public function calcArea(): int
+    {
         return $this->width * $this->height;
     }
 }

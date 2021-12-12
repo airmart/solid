@@ -6,21 +6,18 @@ class User
 {
     /** @var string */
     private string $username;
-    /** @var string  */
+
+    /** @var string */
     private string $password;
-    /** @var int|string */
+
+    /** @var int */
     private int $id;
 
-    /**
-     * User constructor.
-     * @param string $username
-     * @param string $password
-     */
     public function __construct(string $username, string $password)
     {
         $this->username = $username;
         $this->password = $password;
-        $this->id = uniqid();
+        $this->id = (int)uniqid();
     }
 
     /**
