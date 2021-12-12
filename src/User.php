@@ -53,7 +53,7 @@ class User
     }
 
     /**
-     * @return int|string
+     * @return int
      */
     public function getId()
     {
