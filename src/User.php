@@ -4,39 +4,62 @@ namespace App;
 
 class User
 {
+    /** @var string */
     private string $username;
+    /** @var string  */
     private string $password;
+    /** @var int|string */
     private int $id;
 
-    public function __construct(string $u, string $p)
+    /**
+     * User constructor.
+     * @param string $username
+     * @param string $password
+     */
+    public function __construct(string $username, string $password)
     {
-        $this->username = $u;
-        $this->password = $p;
+        $this->username = $username;
+        $this->password = $password;
         $this->id = uniqid();
     }
 
-    public function __get()
+    /**
+     * @return string
+     */
+    public function getUsername(): string
     {
-        if (!$this->username){
-            return $this->username;
-        }
-        if (!$this->password){
-            return $this->password;
-        }
-        if (!$this->id){
-            return $this->id;
-        }
-        return error_log('Nothing to get');
+        return $this->username;
     }
 
-    public function __set($content)
+    /**
+     * @param string $username
+     */
+    public function setUsername(string $username): void
     {
-        if (!$this->username){
-            return $this->username = $content;
-        }
-        if (!$this->password){
-            return $this->password = $content;
-        }
-        return error_log('Nothing to set');
+        $this->username = $username;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param string $password
+     */
+    public function setPassword(string $password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return int|string
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 }
