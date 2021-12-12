@@ -13,6 +13,10 @@ class Rectangle
     {
         $this->width = $width;
         $this->height = $height;
+
+        if ($this->width < 1 || $this->height < 1){
+            error_log('Such values are not valid');
+        }
     }
 
     /**
