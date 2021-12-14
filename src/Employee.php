@@ -19,4 +19,9 @@ class Employee extends Person
         $this->number = $number;
         $this->snils = $snils;
     }
+
+    public function greeting()
+    {
+        return printf("Привет я работник и меня зовут " . $this->getFirstName() . "\n");
+    }
 }

@@ -18,6 +18,11 @@ class Person
         $this->age = $age;
     }
 
+    public function greeting()
+    {
+        return printf("Привет я человек и меня зовут " . $this->firstName . "\n");
+    }
+
     /**
      * @return string
      */

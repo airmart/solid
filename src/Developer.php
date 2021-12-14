@@ -16,4 +16,9 @@ class Developer extends Employee
         $this->level = $level;
         $this->language = $language;
     }
+
+    public function greeting()
+    {
+        return printf("Привет я разработчик и меня зовут " . $this->getFirstName() . "\n");
+    }
 }
