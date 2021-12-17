@@ -1,5 +1,6 @@
 <?php
 
+use App\Car;
 use App\Rectangle;
 use App\User;
 use App\Person;
@@ -33,3 +34,6 @@ $personList = [$employee, $developer, $person];
 foreach ($personList as $onePerson){
     $onePerson->greeting();
 }
+
+$car = new Car();
+$car->drive();
