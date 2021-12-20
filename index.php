@@ -6,6 +6,9 @@ use App\User;
 use App\Person;
 use App\Employee;
 use App\Developer;
+use App\UserMongoDBRepo;
+use App\UserPostgresRepo;
+use App\UserService;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -37,3 +40,6 @@ foreach ($personList as $onePerson){
 
 $car = new Car();
 $car->drive();
+
+$userService = new UserService(new UserMongoDBRepo());
+$userService->filterUserByAge(15);
