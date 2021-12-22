@@ -5,12 +5,10 @@ namespace App;
 class UserPostgresRepo implements UserRepo
 {
 
-    /**
-     * @inheritDoc
-     */
+    /** @return array */
     public function getUsers(): array
     {
-        printf("Используем подключение к POSTGRES и получаем пользователей");
+        echo 'Используем подключение к POSTGRES и получаем пользователей';
         return ['age' => 15, 'username' => 'Пользователь из POSTGRES ДБ'];
     }
 }

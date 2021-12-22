@@ -18,9 +18,10 @@ class Car
         }
     }
 
-    public function drive()
+    public function drive(): void
     {
         $this->engine->drive();
+
         for ($i = 0; $i <= 3; $i++) {
             $this->wheels[$i]->drive();
         }

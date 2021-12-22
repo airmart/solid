@@ -18,9 +18,9 @@ class Person
         $this->age = $age;
     }
 
-    public function greeting()
+    public function greeting(): void
     {
-        return printf("Привет я человек и меня зовут " . $this->firstName . "\n");
+        echo 'Привет я человек и меня зовут ' . $this->firstName;
     }
 
     /**
@@ -78,8 +78,7 @@ class Person
     {
         if ($age < 0) {
             $this->age = 0;
-        }
-        else {
+        } else {
             $this->age = $age;
         }
     }

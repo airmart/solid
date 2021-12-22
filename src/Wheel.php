@@ -4,8 +4,8 @@ namespace App;
 
 class Wheel
 {
-    public function drive()
+    public function drive(): void
     {
-        return printf("Колеса едут");
+        echo 'Колеса едут';
     }
 }

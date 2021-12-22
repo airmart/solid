@@ -4,8 +4,8 @@ namespace App;
 
 class Engine
 {
-    public function drive()
+    public function drive(): void
     {
-        return printf("Двигатель работает");
+        echo 'Двигатель работает';
     }
 }

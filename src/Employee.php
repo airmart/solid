@@ -11,7 +11,11 @@ class Employee extends Person
     /** @var int */
     private int $snils;
 
-    public function __construct(string $firstName, string $lastName, int $age, int $inn, int $number,
+    public function __construct(string $firstName,
+                                string $lastName,
+                                int $age,
+                                int $inn,
+                                int $number,
                                 int $snils)
     {
         parent::__construct($firstName, $lastName, $age);
@@ -20,8 +24,8 @@ class Employee extends Person
         $this->snils = $snils;
     }
 
-    public function greeting()
+    public function greeting(): void
     {
-        return printf("Привет я работник и меня зовут " . $this->getFirstName() . "\n");
+        echo 'Привет я работник и меня зовут ' . $this->getFirstName();
     }
 }

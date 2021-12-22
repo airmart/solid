@@ -2,6 +2,8 @@
 
 namespace App;
 
+use ErrorException;
+
 class Rectangle
 {
     /** @var int */
@@ -14,8 +16,8 @@ class Rectangle
         $this->width = $width;
         $this->height = $height;
 
-        if ($this->width < 1 || $this->height < 1){
-            error_log('Such values are not valid');
+        if ($this->width < 1 || $this->height < 1) {
+            throw new ErrorException('Such values are not valid');
         }
     }
 

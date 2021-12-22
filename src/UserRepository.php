@@ -2,25 +2,25 @@
 
 namespace App;
 
-Class UserRepository extends Entity
+Class UserRepository implements Repository
 {
 
-    protected function create(User $obj): User
+    public function create(User $obj): User
     {
         // TODO: Implement create() method.
     }
 
-    protected function get(): User
+    public function get(): User
     {
         // TODO: Implement get() method.
     }
 
-    protected function update(User $obj): User
+    public function update(User $obj): User
     {
         // TODO: Implement update() method.
     }
 
-    protected function delete(User $obj): User
+    public function delete(User $obj): User
     {
         // TODO: Implement delete() method.
     }
