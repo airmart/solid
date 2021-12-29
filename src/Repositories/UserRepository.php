@@ -6,17 +6,30 @@ use App\Models\User;
 
 Class UserRepository implements Repository
 {
+    /**
+     * @param array $data
+     * @return User
+     */
     public function store(array $data): User
     {
         return new User($data['username'], $data['password']);
     }
 
+    /**
+     * @param int $id
+     * @return User
+     */
     public function show(int $id): User
     {
         // достали юзера по $id
         return new User('name', 'pass');
     }
 
+    /**
+     * @param int $id
+     * @param array $data
+     * @return User
+     */
     public function update(int $id, array $data): User
     {
         // достали юзера по $id
@@ -26,6 +39,9 @@ Class UserRepository implements Repository
         return $user;
     }
 
+    /**
+     * @param int $id
+     */
     public function delete(int $id): void
     {
         // достали юзера по $id
