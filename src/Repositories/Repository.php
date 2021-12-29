@@ -13,9 +13,10 @@ interface Repository
     public function store(array $data): Entity;
 
     /**
+     * @param int $id
      * @return Entity
      */
-    public function show(): Entity;
+    public function show(int $id): Entity;
 
     /**
      * @param int $id
@@ -26,7 +27,7 @@ interface Repository
 
     /**
      * @param int $id
-     * @param Entity $obj
+     * @return void
      */
-    public function delete(int $id,Entity $obj);
+    public function delete(int $id): void;
 }
