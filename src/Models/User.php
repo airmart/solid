@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-class User
+class User extends Entity
 {
     /** @var string */
     private string $username;
