@@ -10,22 +10,23 @@ interface Repository
      * @param Entity $obj
      * @return Entity
      */
-    public function create(Entity $obj): Entity;
+    public function store(Entity $obj): Entity;
 
     /**
      * @return Entity
      */
-    public function get(): Entity;
+    public function show(): Entity;
 
     /**
+     * @param int $id
      * @param Entity $obj
      * @return Entity
      */
-    public function update(Entity $obj): Entity;
+    public function update(int $id, Entity $obj): Entity;
 
     /**
+     * @param int $id
      * @param Entity $obj
-     * @return Entity
      */
-    public function delete(Entity $obj): Entity;
+    public function delete(int $id,Entity $obj);
 }
