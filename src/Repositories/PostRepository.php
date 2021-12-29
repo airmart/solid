@@ -10,18 +10,18 @@ class PostRepository implements Repository
 
     /**
      * @param array $data
-     * @return Entity
+     * @return Post
      */
-    public function store(array $data): Entity
+    public function store(array $data): Post
     {
         return new Post($data['tittle'], $data['text'], $data['userId']);
     }
 
     /**
      * @param int $id
-     * @return Entity
+     * @return Post
      */
-    public function show(int $id): Entity
+    public function show(int $id): Post
     {
         //достали Пост по id
         return new Post('title', 'text', 'userId');
@@ -30,9 +30,9 @@ class PostRepository implements Repository
     /**
      * @param int $id
      * @param array $data
-     * @return Entity
+     * @return Post
      */
-    public function update(int $id, array $data): Entity
+    public function update(int $id, array $data): Post
     {
         //достали Пост по id
         $post = new Post('title', 'text', 'userId');

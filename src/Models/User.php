@@ -59,4 +59,9 @@ class User extends Entity
     {
         return $this->id;
     }
+
+    public function __destruct()
+    {
+        echo 'Юзер с Id' . $this->id . ' был удален';
+    }
 }

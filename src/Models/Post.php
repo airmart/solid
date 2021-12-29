@@ -79,4 +79,9 @@ class Post extends Entity
     {
         return $this->id;
     }
+
+    public function __destruct()
+    {
+        echo 'Пост с Id' . $this->id . ' был удален';
+    }
 }
