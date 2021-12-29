@@ -7,10 +7,10 @@ use App\Models\Entity;
 interface Repository
 {
     /**
-     * @param Entity $obj
+     * @param array $data
      * @return Entity
      */
-    public function store(Entity $obj): Entity;
+    public function store(array $data): Entity;
 
     /**
      * @return Entity
@@ -19,10 +19,10 @@ interface Repository
 
     /**
      * @param int $id
-     * @param Entity $obj
+     * @param array $data
      * @return Entity
      */
-    public function update(int $id, Entity $obj): Entity;
+    public function update(int $id, array $data): Entity;
 
     /**
      * @param int $id
