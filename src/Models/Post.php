@@ -16,12 +16,12 @@ class Post extends Entity
     /** @var int */
     private int $id;
 
-    public function __construct(string $title, string $text, int $userId)
+    public function __construct(int $id, string $title, string $text, int $userId)
     {
         $this->title = $title;
         $this->text = $text;
         $this->userId = $userId;
-        $this->id = (int)uniqid();
+        $this->id = $id;
     }
 
     /**
@@ -80,8 +80,16 @@ class Post extends Entity
         return $this->id;
     }
 
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
     public function __destruct()
     {
-        echo 'Пост с Id' . $this->id . ' был удален';
+        echo 'Пост с Id ' . $this->id . ' был удален' . PHP_EOL;
     }
 }

@@ -12,7 +12,7 @@ Class UserRepository implements Repository
      */
     public function store(array $data): User
     {
-        return new User($data['username'], $data['password']);
+        return new User($data['id'], $data['username'], $data['password']);
     }
 
     /**
@@ -22,7 +22,7 @@ Class UserRepository implements Repository
     public function show(int $id): User
     {
         // достали юзера по $id
-        return new User('name', 'pass');
+        return new User('0', 'name', 'pass');
     }
 
     /**
@@ -33,7 +33,8 @@ Class UserRepository implements Repository
     public function update(int $id, array $data): User
     {
         // достали юзера по $id
-        $user = new User('name', 'pass');
+        $user = new User('0', 'name', 'pass');
+        $user->setId($data['id']);
         $user->setUsername($data['username']);
         $user->setPassword($data['password']);
         return $user;
@@ -45,7 +46,7 @@ Class UserRepository implements Repository
     public function delete(int $id): void
     {
         // достали юзера по $id
-        $user = new User('name', 'pass');
+        $user = new User('0', 'name', 'pass');
         unset($user);
     }
 }

@@ -13,11 +13,11 @@ class User extends Entity
     /** @var int */
     private int $id;
 
-    public function __construct(string $username, string $password)
+    public function __construct(int $id, string $username, string $password)
     {
         $this->username = $username;
         $this->password = $password;
-        $this->id = (int)uniqid();
+        $this->id = $id;
     }
 
     /**
@@ -60,8 +60,16 @@ class User extends Entity
         return $this->id;
     }
 
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
     public function __destruct()
     {
-        echo 'Юзер с Id' . $this->id . ' был удален';
+        echo 'Юзер с Id ' . $this->id . ' был удален' . PHP_EOL;
     }
 }

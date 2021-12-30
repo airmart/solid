@@ -14,7 +14,7 @@ class PostRepository implements Repository
      */
     public function store(array $data): Post
     {
-        return new Post($data['tittle'], $data['text'], $data['userId']);
+        return new Post($data['id'], $data['title'], $data['text'], $data['userId']);
     }
 
     /**
@@ -24,7 +24,7 @@ class PostRepository implements Repository
     public function show(int $id): Post
     {
         //достали Пост по id
-        return new Post('title', 'text', 'userId');
+        return new Post('1', 'title', 'text', '1');
     }
 
     /**
@@ -35,7 +35,8 @@ class PostRepository implements Repository
     public function update(int $id, array $data): Post
     {
         //достали Пост по id
-        $post = new Post('title', 'text', 'userId');
+        $post = new Post('1', 'title', 'text', '1');
+        $post->setId($data['id']);
         $post->setTitle($data['title']);
         $post->setText($data['text']);
         $post->setUserId($data['userId']);
@@ -48,7 +49,7 @@ class PostRepository implements Repository
     public function delete(int $id): void
     {
         //достали Пост по id
-        $post = new Post('title', 'text', 'userId');
+        $post = new Post('1', 'title', 'text', '1');
         unset($post);
     }
 }
